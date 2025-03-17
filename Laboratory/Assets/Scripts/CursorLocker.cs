@@ -1,16 +1,60 @@
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CursorLocker : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static CursorLocker instance;
+    
+    void OnEnable()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
+        if (instance == this)
+        {
+            instance = null;
+        }
+    }
+
+    private void Start()
+    {
+        LockCursor();
+    }
+
+    public void LockCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         
+#if UNITY_EDITOR
+        EditorWindow gameWindow = UnityEditor.EditorWindow.GetWindow(typeof(UnityEditor.EditorWindow).Assembly.GetType("UnityEditor.GameView"));
+        gameWindow.Focus();
+        gameWindow.SendEvent(new Event
+        {
+            button = 0,
+            clickCount = 1,
+            type = EventType.MouseDown,
+            mousePosition = gameWindow.rootVisualElement.contentRect.center
+        });
+#endif
+    }
+
+    public void UnlockCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
