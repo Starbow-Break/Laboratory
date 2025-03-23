@@ -1788,37 +1788,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1676609100239073865, guid: 0d780173c250d334f80c9061373c8e4f, type: 3}
   m_PrefabInstance: {fileID: 476709432}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &477468709
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 477468710}
-  m_Layer: 0
-  m_Name: PickUpSlot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &477468710
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477468709}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: -0.5, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 66723245617387731}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &477724419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2438,11 +2407,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1676609100239073865, guid: 0d780173c250d334f80c9061373c8e4f, type: 3}
   m_PrefabInstance: {fileID: 711425502}
-  m_PrefabAsset: {fileID: 0}
---- !u!143 &720169005 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 4054863213881308882, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-  m_PrefabInstance: {fileID: 5703295574299961159}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &726964687
 PrefabInstance:
@@ -4831,41 +4795,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1676609100239073865, guid: 0d780173c250d334f80c9061373c8e4f, type: 3}
   m_PrefabInstance: {fileID: 1545443264}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1549766000 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7219834065571839837, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-  m_PrefabInstance: {fileID: 5703295574299961159}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1549766004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549766000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard & Mouse
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1001 &1601835448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5847,7 +5776,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -6390,16 +6320,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1676609100239073865, guid: 0d780173c250d334f80c9061373c8e4f, type: 3}
   m_PrefabInstance: {fileID: 2108386624}
   m_PrefabAsset: {fileID: 0}
---- !u!20 &66723245617387727 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 6072198331160897849, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-  m_PrefabInstance: {fileID: 5703295574299961159}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &66723245617387731 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7697336125673383846, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-  m_PrefabInstance: {fileID: 5703295574299961159}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5703295574299961159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6408,46 +6328,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 178438526323969106, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 178438526323969106, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: moveInput
-      value: 
-      objectReference: {fileID: -6752664352775921789, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
-    - target: {fileID: 178438526323969106, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 720169005}
-    - target: {fileID: 178438526323969106, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: playerCameraTransform
-      value: 
-      objectReference: {fileID: 66723245617387731}
-    - target: {fileID: 855616454598683522, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: rotateInput
-      value: 
-      objectReference: {fileID: -8322147749570652928, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
-    - target: {fileID: 855616454598683522, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: rotateXInput
-      value: 
-      objectReference: {fileID: -8322147749570652928, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
-    - target: {fileID: 855616454598683522, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: rotateYInput
-      value: 
-      objectReference: {fileID: 3775938881623904486, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
-    - target: {fileID: 855616454598683522, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: mouseSensitivity
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 855616454598683522, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: cameraRotateInput
-      value: 
-      objectReference: {fileID: 7159919533262065626, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
-    - target: {fileID: 4054863213881308882, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: m_Center.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7219834065571839837, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6497,47 +6377,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1887459653}
     - target: {fileID: 8736864615477099200, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: pickUpUI
-      value: 
-      objectReference: {fileID: 2044376563}
-    - target: {fileID: 8736864615477099200, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: useInput
-      value: 
-      objectReference: {fileID: -8962400433433167871, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
-    - target: {fileID: 8736864615477099200, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: dropInput
-      value: 
-      objectReference: {fileID: -4221446849127682742, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
-    - target: {fileID: 8736864615477099200, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: pickUpParent
-      value: 
-      objectReference: {fileID: 477468710}
-    - target: {fileID: 8736864615477099200, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
       propertyPath: pickUpUIText
       value: 
       objectReference: {fileID: 2044376565}
-    - target: {fileID: 8736864615477099200, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: playerCamera
-      value: 
-      objectReference: {fileID: 66723245617387727}
-    - target: {fileID: 8736864615477099200, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: interactionInput
-      value: 
-      objectReference: {fileID: 3080854039865480041, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
-    - target: {fileID: 8736864615477099200, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      propertyPath: pickableLayerMask.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7697336125673383846, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 477468710}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7219834065571839837, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1549766004}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28164af870ceaca4292540d850e7e49c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

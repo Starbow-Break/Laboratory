@@ -87,6 +87,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3884541164742326753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8384873396203285413}
+  m_Layer: 0
+  m_Name: PickUpSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8384873396203285413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884541164742326753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6, y: -0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7697336125673383846}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7219834065571839837
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +130,7 @@ GameObject:
   - component: {fileID: 4054863213881308882}
   - component: {fileID: 178438526323969106}
   - component: {fileID: 8736864615477099200}
+  - component: {fileID: 2769632447295097608}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -146,7 +178,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.1
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &178438526323969106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,11 +191,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e478c0cc6d326d0428f3ef40bdce5aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 4054863213881308882}
+  playerCameraTransform: {fileID: 7697336125673383846}
   baseSpeed: 3
   gravity: -30
   jumpHeight: 1.2
   sprintSpeed: 5
+  moveInput: {fileID: -6752664352775921789, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
 --- !u!114 &8736864615477099200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,10 +212,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickableLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  playerCameraTransform: {fileID: 7697336125673383846}
-  pickUpUI: {fileID: 0}
+    m_Bits: 64
+  playerCamera: {fileID: 6072198331160897849}
+  pickUpUIText: {fileID: 0}
+  aimUI: {fileID: 0}
   hitRange: 3
+  pickUpParent: {fileID: 8384873396203285413}
+  interactionInput: {fileID: 3080854039865480041, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
+  dropInput: {fileID: -4221446849127682742, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
+--- !u!114 &2769632447295097608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219834065571839837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard & Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &8846241786172007721
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +282,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.70000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8384873396203285413}
   m_Father: {fileID: 6516035558889325315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &6072198331160897849
@@ -288,8 +357,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544fb994b587757419aad57fa3261472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 120
+  mouseSensitivity: 25
   playerBody: {fileID: 6516035558889325315}
+  cameraRotateInput: {fileID: 7159919533262065626, guid: 105a4496a8b6b034e95237d2bcf0529d, type: 3}
 --- !u!114 &3969510020416323654
 MonoBehaviour:
   m_ObjectHideFlags: 0
